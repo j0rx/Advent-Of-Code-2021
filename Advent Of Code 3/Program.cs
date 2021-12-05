@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-
 namespace Advent_Of_Code_3
 {
     class Program
@@ -13,8 +12,8 @@ namespace Advent_Of_Code_3
             var lines = File.ReadLines("C:/Users/jolle/Desktop/advent of code/Advent Of Code 3/input.txt").ToArray();
             int oxygen = Filter(lines.ToList(), 0, '1');
             int co2 = Filter(lines.ToList(), 0, '0');
-            Console.WriteLine("Part 1: " + CalculatePowerConsumtion(lines));
-            Console.WriteLine("Part 2: " + oxygen * co2);
+            Console.WriteLine("Advent 3!\nPart 1: " + CalculatePowerConsumtion(lines)+ "\nPart 2: " + oxygen * co2);
+            Console.WriteLine();
             Console.ReadLine();
         }
         static int Filter(List<string> lines, int col, char mostCommon)
@@ -59,16 +58,11 @@ namespace Advent_Of_Code_3
                 for (int j = 0; j < lines.Length; j++)
                 {
                     if (lines[j][i] == '1')
-                    {
                         count += 1;
-                    }
                     else
-                    {
                         count -= 1;
-                    }
                 }
-                if (count < 0)
-                {
+                if (count < 0) {
                     gamma += '0';
                     epsilon += '1';
                 }

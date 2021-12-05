@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-
 namespace Advent_Of_Code_2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Advent 2!");
             var lines = File.ReadLines("C:/Users/jolle/Desktop/advent of code/Advent Of Code 2/input.txt");
-            Console.WriteLine("Part 1: " + CalculateLocation(lines));
-            Console.WriteLine("Part 2: " + AdvancedCalculation(lines));
+            Console.WriteLine("Advent 2!\nPart 1: " + CalculateLocation(lines)+ "\nPart 2: " + AdvancedCalculation(lines));
             Console.ReadLine();
         }
         static int AdvancedCalculation(IEnumerable<string> lines)

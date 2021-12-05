@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-
 namespace Advent_Of_Code_5
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Advent 5!");
             var lines = File.ReadLines("C:/Users/jolle/Desktop/advent of code/Advent Of Code 5/input.txt").ToArray();
             List<Lines> valueList = new List<Lines>();
             int[,] field = new int[1000, 1000];
@@ -18,8 +16,7 @@ namespace Advent_Of_Code_5
                 valueList.Add(new Lines(line));
             }
             var selectedList = valueList.Where(l => l.fromX == l.toX || l.fromY == l.toY).ToList();
-            Console.WriteLine("Part 1: "+CountCrossings(selectedList, field));
-            Console.WriteLine("Part 2: " + CountCrossings(valueList, field));
+            Console.WriteLine("Advent 5!\nPart 1: " + CountCrossings(selectedList, field)+ "\nPart 2: " + CountCrossings(valueList, field));
             Console.ReadKey();
         }
         static int CountCrossings(List<Lines> selectedList, int[,] field)
@@ -30,8 +27,10 @@ namespace Advent_Of_Code_5
                 while (line.fromX != line.toX || line.fromY != line.toY)
                 {
                     field[line.fromX, line.fromY] += 1;
-                    if (line.fromY != line.toY) line.fromY += line.directionY;
-                    if (line.fromX != line.toX) line.fromX += line.directionX;
+                    if (line.fromY != line.toY)
+                        line.fromY += line.directionY;
+                    if (line.fromX != line.toX)
+                        line.fromX += line.directionX;
                 }
                 field[line.toX, line.toY] += 1;
             }
@@ -41,9 +40,7 @@ namespace Advent_Of_Code_5
                 for (int j = 0; j < 1000; j++)
                 {
                     if (field[i, j] > 1)
-                    {
                         counter += 1;
-                    }
                 }
             }
             return counter;

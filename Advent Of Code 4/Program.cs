@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-
 namespace Advent_Of_Code_4
 {
     class Program
@@ -22,8 +21,7 @@ namespace Advent_Of_Code_4
                 rows = boards[i].Trim().Split("\n");
                 boardList.Add(new BingoBoards(rows));
             }
-            Console.WriteLine("Winner value: " + FindWinner(numbers, boardList, false));
-            Console.WriteLine("Looser value: " + FindWinner(numbers, boardList, true));
+            Console.WriteLine("Advent 4!\nWinner value: " + FindWinner(numbers, boardList, false)+ "\nLooser value: " + FindWinner(numbers, boardList, true));
             Console.ReadLine();
         }
         static int FindWinner(string[] numbers, List<BingoBoards> boardList, bool looser)

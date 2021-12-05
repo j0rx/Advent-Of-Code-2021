@@ -1,18 +1,16 @@
 ﻿using System;
 using System.IO;
-
 namespace advent_of_code
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Advent 1!");
             var lines = File.ReadAllLines("C:/Users/jolle/Desktop/advent of code/advent of code/input.txt");
             int[] ints = Array.ConvertAll(lines, s => int.Parse(s));
             var incrementsCount = IncrementsCount(ints); //Step 1
             var valuesByThree = SumValuesByThree(ints); //Step 2
-            Console.WriteLine("Part 1: " + incrementsCount + " Part 2: " + IncrementsCount(valuesByThree));
+            Console.WriteLine("Advent 1!\nPart 1: " + incrementsCount + "\nPart 2: " + IncrementsCount(valuesByThree));
             Console.Read();
         }
         static int[] SumValuesByThree(int[] ints)
