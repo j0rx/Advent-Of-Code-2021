@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advent of Code 2021", "Advent Of Code 2021\Advent of Code 2021.csproj", "{3D64E639-68F6-44C5-9C8C-BE1226781B98}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Advent of Code 2", "Advent Of Code 2\Advent of Code 2.csproj", "{2065A869-3BA2-48E7-9918-BD505D5B873E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Advent of Code 1", "Advent Of Code 1\Advent of Code 1.csproj", "{C2833E1D-5F92-4FD9-B521-B4D30A1FA8F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Advent of Code 3", "Advent Of Code 3\Advent of Code 3.csproj", "{A8F111E7-4F34-45F2-9523-E75408AC4EEE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Advent of Code 4", "Advent Of Code 4\Advent of Code 4.csproj", "{2808DBE6-F191-46C3-B337-C1DFAA80C3DB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Advent of Code 5", "Advent Of Code 5\Advent of Code 5.csproj", "{A29E4D74-9033-4F17-A9DA-1B5FBD8013AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D64E639-68F6-44C5-9C8C-BE1226781B98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D64E639-68F6-44C5-9C8C-BE1226781B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D64E639-68F6-44C5-9C8C-BE1226781B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D64E639-68F6-44C5-9C8C-BE1226781B98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2065A869-3BA2-48E7-9918-BD505D5B873E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2065A869-3BA2-48E7-9918-BD505D5B873E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2065A869-3BA2-48E7-9918-BD505D5B873E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2065A869-3BA2-48E7-9918-BD505D5B873E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2833E1D-5F92-4FD9-B521-B4D30A1FA8F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2833E1D-5F92-4FD9-B521-B4D30A1FA8F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2833E1D-5F92-4FD9-B521-B4D30A1FA8F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2833E1D-5F92-4FD9-B521-B4D30A1FA8F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8F111E7-4F34-45F2-9523-E75408AC4EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8F111E7-4F34-45F2-9523-E75408AC4EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8F111E7-4F34-45F2-9523-E75408AC4EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8F111E7-4F34-45F2-9523-E75408AC4EEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2808DBE6-F191-46C3-B337-C1DFAA80C3DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2808DBE6-F191-46C3-B337-C1DFAA80C3DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2808DBE6-F191-46C3-B337-C1DFAA80C3DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2808DBE6-F191-46C3-B337-C1DFAA80C3DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A29E4D74-9033-4F17-A9DA-1B5FBD8013AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A29E4D74-9033-4F17-A9DA-1B5FBD8013AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A29E4D74-9033-4F17-A9DA-1B5FBD8013AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A29E4D74-9033-4F17-A9DA-1B5FBD8013AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {059719ED-71A5-40CE-B071-3F6B4A8ABABB}
+	EndGlobalSection
+EndGlobal
