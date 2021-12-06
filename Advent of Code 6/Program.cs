@@ -12,8 +12,8 @@ namespace Advent_of_Code_6
             var lines = File.ReadAllText("C:/Users/jolle/Desktop/advent of code/Advent Of Code 2021/Advent Of Code 6/input.txt");
             byte[] inputs = lines.Split(',').Select(l=>byte.Parse (l)).ToArray();
             var fishCountPart2 = CountFish(256, inputs, 6 , 8);
-            var fishCountpart1 = CountFish(80, inputs, 6, 8);
-            Console.WriteLine($"Advent 6!\nPart 1: {fishCountpart1}\nPart 2: {fishCountPart2}");
+            var fishCountPart1 = CountFish(80, inputs, 6, 8);
+            Console.WriteLine($"Advent 6!\nPart 1: {fishCountPart1}\nPart 2: {fishCountPart2}");
             Console.ReadKey();
 
             long CountFish(int days, byte[] inputs, int birthFrequency, int maxAge)
