@@ -26,11 +26,8 @@ namespace advent_of_code
         {
             int counter = 0;
             for (int i = 1; i < ints.Length; i++)
-            {
-                if (ints[i - 1] < ints[i])
-                {
-                    counter++;
-                }
+            { 
+                counter += ints[i - 1] < ints[i] ? 1 : 0; 
             }
             return counter;
         }

@@ -41,7 +41,7 @@ namespace Advent_Of_Code_2
         }
         static int CalculateLocation(IEnumerable<string> lines)
         {
-            var values = lines.Select(line => line.Split(' ')).ToLookup(line => line[0], line => int.Parse(line[1]));
+            var values = lines.Select(l => l.Split(' ')).ToLookup(l => l[0], l => int.Parse(l[1]));
             int up = 0;
             int down = 0;
             int forward = 0;
