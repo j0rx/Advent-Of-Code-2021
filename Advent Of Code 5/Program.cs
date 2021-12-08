@@ -10,20 +10,15 @@ namespace Advent_Of_Code_5
         {
             var lines = File.ReadLines("C:/Users/jolle/Desktop/advent of code/Advent Of Code 5/input.txt").ToArray();
             List<Lines> valueList = new List<Lines>();
-            int[,] field = new int[1000, 1000];
+            List<Lines> valueList2 = new List<Lines>();
             foreach (var line in lines)
             {
                 valueList.Add(new Lines(line));
+                valueList2.Add(new Lines(line));
             }
             var selectedList = valueList.Where(l => l.fromX == l.toX || l.fromY == l.toY).ToList();
-            Console.WriteLine("Advent 5!\nPart 1: " + CountCrossings(selectedList, field));
-            valueList.Clear();
-            field = new int[1000, 1000];
-            foreach (var line in lines)
-            {
-                valueList.Add(new Lines(line));
-            }
-            Console.WriteLine("Part 2: " + CountCrossings(valueList, field));
+            Console.WriteLine("Advent 5!\nPart 1: " + CountCrossings(selectedList, new int[1000, 1000]));
+            Console.WriteLine("Part 2: " + CountCrossings(valueList2, new int[1000, 1000]));
             Console.ReadKey();
         }
         static int CountCrossings(List<Lines> selectedList, int[,] field)
@@ -32,12 +27,11 @@ namespace Advent_Of_Code_5
 
             foreach (var line in selectedList)
             {
-
                 while (line.fromX != line.toX || line.fromY != line.toY)
                 {
                     counter += (field[line.fromX, line.fromY] == 1) ? 1 : 0;
                     field[line.fromX, line.fromY] += 1;
-                    line.fromY += (line.fromY != line.toY)? line.directionY:0;
+                    line.fromY += (line.fromY != line.toY) ? line.directionY : 0;
                     line.fromX += (line.fromX != line.toX) ? line.directionX : 0;
                 }
                 counter += (field[line.toX, line.toY] == 1) ? 1 : 0;
