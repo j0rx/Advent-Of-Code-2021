@@ -16,32 +16,32 @@ namespace Advent_Of_Code_5
                 valueList.Add(new Lines(line));
             }
             var selectedList = valueList.Where(l => l.fromX == l.toX || l.fromY == l.toY).ToList();
-            Console.WriteLine("Advent 5!\nPart 1: " + CountCrossings(selectedList, field)+ "\nPart 2: " + CountCrossings(valueList, field));
+            Console.WriteLine("Advent 5!\nPart 1: " + CountCrossings(selectedList, field));
+            valueList.Clear();
+            field = new int[1000, 1000];
+            foreach (var line in lines)
+            {
+                valueList.Add(new Lines(line));
+            }
+            Console.WriteLine("Part 2: " + CountCrossings(valueList, field));
             Console.ReadKey();
         }
         static int CountCrossings(List<Lines> selectedList, int[,] field)
         {
-            
+            int counter = 0;
+
             foreach (var line in selectedList)
             {
+
                 while (line.fromX != line.toX || line.fromY != line.toY)
                 {
+                    counter += (field[line.fromX, line.fromY] == 1) ? 1 : 0;
                     field[line.fromX, line.fromY] += 1;
-                    if (line.fromY != line.toY)
-                        line.fromY += line.directionY;
-                    if (line.fromX != line.toX)
-                        line.fromX += line.directionX;
+                    line.fromY += (line.fromY != line.toY)? line.directionY:0;
+                    line.fromX += (line.fromX != line.toX) ? line.directionX : 0;
                 }
+                counter += (field[line.toX, line.toY] == 1) ? 1 : 0;
                 field[line.toX, line.toY] += 1;
-            }
-            int counter = 0;
-            for (int i = 0; i < 1000; i++)
-            {
-                for (int j = 0; j < 1000; j++)
-                {
-                    if (field[i, j] > 1)
-                        counter += 1;
-                }
             }
             return counter;
         }
