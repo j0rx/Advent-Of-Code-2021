@@ -43,7 +43,6 @@ namespace Advent_Of_Code_8
             }
             for (int i = 0; i < lines.Length; i++)
             {
-                //var unknown = "abcdefg";
                 var sides = new char[7];
                 sides[0] = Convert.ToChar(SubtractChars(numbers[i, 7], numbers[i, 1]));
                 numbers[i, 6] = inputData[i].Where(l => (l.Length == 6 && l.Contains(numbers[i, 1][0]) == false)|| (l.Length == 6 && l.Contains(numbers[i, 1][1]) == false)).FirstOrDefault();
@@ -63,7 +62,6 @@ namespace Advent_Of_Code_8
                     numbers[i, j] = String.Concat(numbers[i, j].OrderBy(c => c));
                 }
             }
-
             tempCount = 0;
             var sum = 0;
             foreach (var line in outputData)
@@ -76,7 +74,6 @@ namespace Advent_Of_Code_8
                     {
                         sumTxt += (lineOrdered == numbers[tempCount, j]) ? j : "";
                     }
-
                 }
                 tempCount += 1;
                 sum += int.Parse(sumTxt);
