@@ -16,11 +16,21 @@ namespace Advent_Of_Code_8
             var counter = 0;
             var numbers = new string[outputData.Length, 10];
             var tempCount = 0;
-            foreach (var line in inputData)
+            tempCount = 0; 
+            //Step 1:
+            foreach (var line in outputData)
             {
                 for (int i = 0; i < line.Length; i++)
                 {
                     counter += lookForValues.Contains(line[i].Length) ? 1 : 0;
+                }
+                tempCount += 1;
+            }
+            //Step 2:
+            foreach (var line in inputData)
+            {
+                for (int i = 0; i < line.Length; i++)
+                {
                     switch (line[i].Length)
                     {
                         case 2:
