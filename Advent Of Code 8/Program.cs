@@ -17,7 +17,7 @@ namespace Advent_Of_Code_8
             var numbers = new string[outputData.Length, 10];
             var tempCount = 0;
             tempCount = 0; 
-            //Step 1:
+            //Part 1:
             foreach (var line in outputData)
             {
                 for (int i = 0; i < line.Length; i++)
@@ -26,7 +26,8 @@ namespace Advent_Of_Code_8
                 }
                 tempCount += 1;
             }
-            //Step 2:
+            tempCount = 0;
+            //Part 2:
             foreach (var line in inputData)
             {
                 for (int i = 0; i < line.Length; i++)
